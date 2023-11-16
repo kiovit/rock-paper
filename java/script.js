@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
         p.textContent = "It's a TIE! You both choose " + playerSelection;
         return "tie";
     } else {
-        p.textContent = computerSelection + " beats " + playerSelection + ". YOU LOSE :(";
+        p.textContent = computerSelection + " beats " + playerSelection + ". YOU LOSE!!";
         return "lose";
     }
 
