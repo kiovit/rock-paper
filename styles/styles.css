@@ -29,7 +29,9 @@ div{
     align-content: center;
     height: 3rem;    
 }
-
+img{
+    max-height: 3rem;
+}
 .button {
     background-color: #04AA6D; /* Green */
     border:none;

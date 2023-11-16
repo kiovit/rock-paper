@@ -6,62 +6,39 @@ function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-let body = document.querySelector("body");
-let div2 = document.createElement("div");
-div2.classList.add("divTwo");
-let div = document.createElement("div");
-div.classList.add("main");
-body.appendChild(div);
-body.appendChild(div2);
-
-
-let resultContainer = document.createElement("div");
-resultContainer.id = "result"; 
-div2.appendChild(resultContainer);
-
-let resultMessage = document.createElement("p");
-resultContainer.appendChild(resultMessage);
-
-
-let userImage = document.createElement("img");
-resultContainer.appendChild(userImage);
-
-let computerImage = document.createElement("img");
-resultContainer.appendChild(computerImage);
-
 function playRound(playerSelection, computerSelection) {
-   
-    userImage.src = getImagePath(playerSelection);
-    computerImage.src = getImagePath(computerSelection);
-
+    let p = document.querySelector("#result");
+    
+    if (!p) {
+        p = document.createElement("p");
+        p.id = "result"; // Assign an id to easily find it later
+        div2.appendChild(p);
+           }
+    
     if (
         (playerSelection === "Rock" && computerSelection === "Scissors") ||
         (playerSelection === "Paper" && computerSelection === "Rock") ||
         (playerSelection === "Scissors" && computerSelection === "Paper")
     ) {
-        resultMessage.textContent = playerSelection + " beats " + computerSelection + ". YOU WIN, VERY NICE!!";
+        p.textContent = playerSelection + " beats " + computerSelection + ". YOU WIN, VERY NICE!!";
         return "win";
     } else if (playerSelection === computerSelection) {
-        resultMessage.textContent = "It's a TIE! You both choose " + playerSelection;
+        p.textContent = "It's a TIE! You both choose " + playerSelection;
         return "tie";
     } else {
-        resultMessage.textContent = computerSelection + " beats " + playerSelection + ". YOU LOSE!!";
+        p.textContent = computerSelection + " beats " + playerSelection + ". YOU LOSE!!";
         return "lose";
     }
+
 }
 
-function getImagePath(selection) {
-    switch (selection) {
-        case "Rock":
-            return "./img/rock.png";
-        case "Paper":
-            return "./img/paper.png";
-        case "Scissors":
-            return "./img/scissors.png";
-        default:
-            return ""; 
-    }
-}
+let body = document.querySelector("body");
+let div2 = document.createElement("div");
+div2.classList.add("divTwo");
+let div = document.createElement("div");
+div.classList.add("main")
+body.appendChild(div);
+body.appendChild(div2);
 
 function playGame() {
     let btnR = document.createElement("button");
@@ -122,16 +99,23 @@ function playRoundAndCheckGame(userSelection) {
         return;
     }
 
-    updateScoreDisplay();
-}
-
-function resetGame() {
-    userScore = 0;
-    computerScore = 0;
-    updateScoreDisplay();
-}
+    function resetGame() {
+        userScore = 0;
+        computerScore = 0;
+        updateScoreDisplay();
+    }
 
 function updateScoreDisplay() {
+    let p = document.querySelector("#result2");
+
+    if (!p) {
+        p = document.createElement("p");
+        p.id = "result2";
+        div2.appendChild(p);
+    }
+
+    p.textContent = "Player Score: " + userScore + "\nComputer Score: " + computerScore;
+}
     let p = document.querySelector("#result2");
 
     if (!p) {
