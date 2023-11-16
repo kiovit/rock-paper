@@ -20,13 +20,13 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "Paper" && computerSelection === "Rock") ||
         (playerSelection === "Scissors" && computerSelection === "Paper")
     ) {
-        p.textContent = playerSelection + " beats " + computerSelection + ".  YOU WIN, VERY NICE!!";
+        p.textContent = playerSelection + " beats " + computerSelection + ". YOU WIN, VERY NICE!!";
         return "win";
     } else if (playerSelection === computerSelection) {
         p.textContent = "It's a TIE! You both choose " + playerSelection;
         return "tie";
     } else {
-        p.textContent = computerSelection + " beats " + playerSelection + ".  YOU LOSE :(";
+        p.textContent = computerSelection + " beats " + playerSelection + ". YOU LOSE :(";
         return "lose";
     }
 
