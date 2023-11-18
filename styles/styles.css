@@ -1,18 +1,18 @@
 html{
-    font-family: Arial, Helvetica, sans-serif;
     background-image:url("https://raw.githubusercontent.com/kiovit/rock-paper/02f19d13019313f69bb089f5b07d57d9aa24e311/img/bkgnd.jpeg");
     }
 
 body{
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
     color: white;
-    background-color: rgb(12, 83, 141);
+    background-color: #00819f;
     font-size: 3rem;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     padding-bottom: 1rem;
     margin-top: 0;
     margin-bottom: 0;
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     color: white;
-    background-color: rgb(12, 83, 141);
+    background-color: #00819f;
     font-size: 2em;
     text-align: center;
     padding-bottom: 1rem;
@@ -46,7 +46,7 @@ img{
 }
 
 .button {
-    background-color: #04AA6D; /* Green */
+    background-color: #25D366; 
     border:none;
     border-radius: 1rem;
     max-height: 3rem;
@@ -64,7 +64,7 @@ img{
     align-items:center;
     justify-content: center;
     min-height: 10rem;
-    background-color: rgb(12, 83, 141);
+    background-color: #00819f;
     margin-top: 2rem;
     padding: 1rem;
     margin-bottom: 0; 
