@@ -1,10 +1,11 @@
 html{
-    background-image:url("https://raw.githubusercontent.com/kiovit/rock-paper/02f19d13019313f69bb089f5b07d57d9aa24e311/img/bkgnd.jpeg");
+    min-height: 100svh;
     }
 
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-image:url("https://raw.githubusercontent.com/kiovit/rock-paper/02f19d13019313f69bb089f5b07d57d9aa24e311/img/bkgnd.jpeg");
 }
 
 h1 {
@@ -15,8 +16,7 @@ h1 {
     padding: 1rem;
     padding-bottom: 1rem;
     margin-top: 0;
-    margin-bottom: 0;
-      
+    margin-bottom: 0;      
 }
 
 h2 {
@@ -25,8 +25,7 @@ h2 {
     font-size: 2em;
     text-align: center;
     padding-bottom: 1rem;
-    margin-top: 0;
-      
+    margin-top: 0;      
 }
 
 div{
@@ -40,9 +39,10 @@ div{
     align-content: center;
     height: 4rem;    
 }
+
 img{
     max-height: 4rem;
-
+    margin-left: 2rem;
 }
 
 .button {
@@ -55,7 +55,7 @@ img{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1rem;  
 }
 
 .divTwo{
