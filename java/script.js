@@ -15,6 +15,8 @@ body.appendChild(div);
 body.appendChild(div2);
 
 
+
+
 let resultContainer = document.createElement("div");
 resultContainer.id = "result"; 
 div2.appendChild(resultContainer);
